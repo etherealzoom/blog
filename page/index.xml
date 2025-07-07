@@ -7,23 +7,23 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>etherealzoom</copyright>
-        <lastBuildDate>Fri, 09 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://etherealzoom.github.io/blog/page/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 07 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://etherealzoom.github.io/blog/page/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>About</title>
+        <link>https://etherealzoom.github.io/blog/about/</link>
+        <pubDate>Mon, 07 Jul 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://etherealzoom.github.io/blog/about/</guid>
+        <description>&lt;p&gt;&lt;em&gt;&lt;strong&gt;University&lt;/strong&gt;&lt;/em&gt; Sun Yat-sen University, Guangzhou, China
+&lt;em&gt;&lt;strong&gt;major&lt;/strong&gt;&lt;/em&gt;      Microelectronics Science and Engineering&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Archives</title>
         <link>https://etherealzoom.github.io/blog/archives/</link>
         <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
         
         <guid>https://etherealzoom.github.io/blog/archives/</guid>
         <description></description>
-        </item>
-        <item>
-        <title>About</title>
-        <link>https://etherealzoom.github.io/blog/about/</link>
-        <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
-        
-        <guid>https://etherealzoom.github.io/blog/about/</guid>
-        <description>&lt;p&gt;&lt;em&gt;&lt;strong&gt;University&lt;/strong&gt;&lt;/em&gt; Sun Yat-sen University, Guangzhou, China
-&lt;em&gt;&lt;strong&gt;major&lt;/strong&gt;&lt;/em&gt;      Microelectronics Science and Engineering&lt;/p&gt;
-</description>
         </item>
         <item>
         <title>Links</title>
