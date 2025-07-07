@@ -7,7 +7,15 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>etherealzoom</copyright>
-        <lastBuildDate>Tue, 08 Jul 2025 00:55:10 +0800</lastBuildDate><atom:link href="https://etherealzoom.github.io/blog/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 08 Jul 2025 02:15:15 +0800</lastBuildDate><atom:link href="https://etherealzoom.github.io/blog/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Git</title>
+        <link>https://etherealzoom.github.io/blog/categories/git/</link>
+        <pubDate>Tue, 08 Jul 2025 02:15:15 +0800</pubDate>
+        
+        <guid>https://etherealzoom.github.io/blog/categories/git/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Business</title>
         <link>https://etherealzoom.github.io/blog/categories/business/</link>
         <pubDate>Tue, 08 Jul 2025 00:55:10 +0800</pubDate>
