@@ -6,7 +6,16 @@
         <description>Recent content in Categories on etherealzoom</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <copyright>etherealzoom</copyright><atom:link href="https://etherealzoom.github.io/blog/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <copyright>etherealzoom</copyright>
+        <lastBuildDate>Tue, 08 Jul 2025 00:50:42 +0800</lastBuildDate><atom:link href="https://etherealzoom.github.io/blog/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Business</title>
+        <link>https://etherealzoom.github.io/blog/categories/business/</link>
+        <pubDate>Tue, 08 Jul 2025 00:50:42 +0800</pubDate>
+        
+        <guid>https://etherealzoom.github.io/blog/categories/business/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Test</title>
         <link>https://etherealzoom.github.io/blog/categories/test/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
