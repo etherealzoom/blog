@@ -274,17 +274,33 @@ loading="lazy"
 &lt;li>&lt;strong>供应链的强控制力&lt;/strong>（从茶园到茶杯的垂直整合）&lt;/li>
 &lt;li>&lt;strong>资本参与的深度绑定&lt;/strong>（加盟商既是投资者又是传播者）&lt;/li>
 &lt;/ul>
-&lt;p>未来若能在“文化疲劳周期”（约3-5年）内完成向“生活方式平台”的转型（如拓展茶器、茶礼、茶空间衍生品），或将成为首个突破千亿市值的新茶饮品牌。&lt;/p></description></item><item><title>hugo depoly</title><link>https://etherealzoom.github.io/blog/p/hugo-depoly/</link><pubDate>Mon, 07 Jul 2025 20:16:23 +0800</pubDate><guid>https://etherealzoom.github.io/blog/p/hugo-depoly/</guid><description>&lt;h1 id="1-修正时间">1. 修正时间
-&lt;/h1>&lt;p>&lt;strong>存在文章时间显示错误&lt;/strong>
+&lt;p>未来若能在“文化疲劳周期”（约3-5年）内完成向“生活方式平台”的转型（如拓展茶器、茶礼、茶空间衍生品），或将成为首个突破千亿市值的新茶饮品牌。&lt;/p></description></item><item><title>Hugo Depoly</title><link>https://etherealzoom.github.io/blog/p/hugo-depoly/</link><pubDate>Mon, 07 Jul 2025 20:16:23 +0800</pubDate><guid>https://etherealzoom.github.io/blog/p/hugo-depoly/</guid><description>&lt;h2 id="hugo学习记录">Hugo学习记录
+&lt;/h2>&lt;h3 id="对于main文件夹和theme文件夹的优先级">对于main文件夹和theme文件夹的优先级
+&lt;/h3>&lt;p>main文件夹里面的文件优先级最高，如果main中有文件的层级与在theme中一致，那么会优先采取main中的设置。
+所以为了防止theme中的源文件被修改，通常会复制一份到main文件中进行修改，这样如果出问题了，还有后悔药吃。&lt;/p>
+&lt;h2 id="hugo-optimization-手记">Hugo optimization 手记
+&lt;/h2>&lt;h3 id="修正时间">修正时间
+&lt;/h3>&lt;p>&lt;strong>存在文章时间显示错误&lt;/strong>
 &lt;em>Jul 07, 2025 -&amp;gt; 显示为 Jul 07, 80815&lt;/em>&lt;/p>
-&lt;p>在netlify.toml文件夹中添加：
-[context.production]
-command = &amp;ldquo;cd exampleSite &amp;amp;&amp;amp; hugo &amp;ndash;gc &amp;ndash;themesDir ../.. -b ${URL}&amp;rdquo;
-[context.production.environment]
-HUGO_ENV = &amp;ldquo;production&amp;rdquo;
-TZ = &amp;ldquo;/usr/share/ZZHAO/PRC&amp;rdquo;&lt;/p>
-&lt;h1 id="2-github-action">2. GitHub action
-&lt;/h1>&lt;ol>
+&lt;p>在netlify.toml文件夹中添加：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">[context.production]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> command = &amp;#34;cd exampleSite &amp;amp;&amp;amp; hugo --gc --themesDir ../.. -b ${URL}&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> [context.production.environment]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> HUGO_ENV = &amp;#34;production&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> TZ = &amp;#34;/usr/share/ZZHAO/PRC&amp;#34;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="github-action">GitHub action
+&lt;/h3>&lt;ol>
 &lt;li>需要到github账户的developer生成TOKEN（目前是有限期一年）&lt;/li>
 &lt;li>然后到blog的main仓库的设置添加token并命名为TOKEN，这是因为在本地文件的yaml文件里面的名字是TOKEN，这样可以不改此文件。
 在hugo主文件创建一个.github/workflows/xxxx.yaml文件，将以下内容复制进去:&lt;/li>
@@ -368,8 +384,8 @@ TZ = &amp;ldquo;/usr/share/ZZHAO/PRC&amp;rdquo;&lt;/p>
 &lt;li>推送上去之后，会自动GitHub Actions，修改blog网页的仓库，进而修改个人博客内容。&lt;/li>
 &lt;li>Github action的好处是，不需要在public的文件夹内提交到GitHub上了，只需要在main文件夹即可。&lt;/li>
 &lt;/ol>
-&lt;h1 id="3-hugo-stack-set-double-coulnm">3. hugo-stack set double coulnm
-&lt;/h1>&lt;p>在VSCode里面搜索 &lt;em>&lt;strong>custom.scss&lt;/strong>&lt;/em> 文件，然后添加下面代码即可&lt;/p>
+&lt;h3 id="hugo-stack-set-double-coulnm">hugo-stack set double coulnm
+&lt;/h3>&lt;p>在VSCode里面搜索 &lt;em>&lt;strong>custom.scss&lt;/strong>&lt;/em> 文件，然后添加下面代码即可&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -414,11 +430,8 @@ TZ = &amp;ldquo;/usr/share/ZZHAO/PRC&amp;rdquo;&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h1 id="4-hugo-need-install-weight">4. hugo need install weight
-&lt;/h1>&lt;ol>
-&lt;li>评论系统推荐giscus, better than utyerance评论系统&lt;/li>
-&lt;li>加音乐播放器：Aplayer + MetingJs&lt;/li>
-&lt;li>widgets homepage 小组件&lt;/li>
+&lt;/div>&lt;h3 id="hugo-need-install-weight">hugo need install weight
+&lt;/h3>&lt;ol>
 &lt;li>opengraph
 这部分是用来配置 Open Graph协议 的，它能让你自定义当网站链接被分享到社交媒体（如 Twitter, Facebook, Telegram 等）时，显示的预览卡片样式。
 twitter:
@@ -436,15 +449,159 @@ src: 填写图片的路径或完整的 URL。
 如果 local: true，这里填相对路径，如 images/default-cover.jpg。
 如果 local: false，这里填完整 URL，如 &lt;a class="link" href="https://example.com/images/default-cover.jpg" target="_blank" rel="noopener"
 >https://example.com/images/default-cover.jpg&lt;/a>。&lt;/li>
-&lt;li>colorScheme
-这部分控制网站的主题颜色模式（白天/黑夜模式）。
-toggle: true
-设为 true 会在网站上显示一个切换按钮 ☀️/🌙，让访问者可以手动在浅色和深色模式之间切换。
-default: auto
-设置网站的默认颜色模式。
-auto: （推荐） 自动根据访问者操作系统的设置来显示浅色或深色模式。
-light: 强制默认显示浅色模式。
-dark: 强制默认显示深色模式。&lt;/li>
+&lt;/ol>
+&lt;h3 id="剔除中英文模式只留下一种">剔除中英文模式，只留下一种
+&lt;/h3>&lt;p>将整个Blog风格统一化，左侧边栏使用英文标注各个page&lt;/p>
+&lt;h3 id="6">6
+&lt;/h3>&lt;p>6&lt;/p>
+&lt;h3 id="改善白天模式可读性">改善白天模式可读性
+&lt;/h3>&lt;p>在Stack以及很多主题中，主题文件夹下的assets/scss下都提供了一个供用户自定义的custom.scss文件。
+将下面代码块复制到custom.scss文件中，会对比度会更高，看得会更清晰。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-scss" data-lang="scss">&lt;span class="line">&lt;span class="cl">&lt;span class="nd">:root&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">--body-background&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mh">#EBEBEB&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">--accent-color&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mh">#1B365D&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">--accent-color-darker&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mh">#202A44&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">--accent-color-text&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mh">#FFF&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">--body-text-color&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mh">#202A44&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nd">:root&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">--card-background&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mh">#FFF&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">--card-background-selected&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mh">#EBEBEB&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">--card-text-color-main&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mh">#202A44&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">--card-text-color-secondary&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mh">#53565A&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">--card-text-color-tertiary&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mh">#888B8D&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>References. &lt;br>
+&lt;a class="link" href="https://oxidane-uni.github.io/p/%E4%BD%BF%E7%94%A8-hugo-%E5%AF%B9%E5%8D%9A%E5%AE%A2%E7%9A%84%E9%87%8D%E5%BB%BA%E4%B8%8E-stack-%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96%E8%AE%B0%E5%BD%95/#%E6%96%B0%E5%BB%BA%E7%BD%91%E7%AB%99" target="_blank" rel="noopener"
+>oxidane-uni的博客&lt;/a>&lt;/p>
+&lt;h3 id="更改白天黑夜模式图标">更改白天/黑夜模式图标
+&lt;/h3>&lt;p>观察网页的CSS可以发现：深色模式下图标的切换就是“一个显示，一个隐藏”，在相关文件中指定该用的图标即可。
+在&lt;a class="link" href="https://tabler-icons.io/" target="_blank" rel="noopener"
+>tabler&lt;/a>下载&amp;quot;sun-high&amp;quot;和&amp;quot;moon-stars&amp;quot;这两个图标，好看。
+作者将黑白开关做在了侧边栏里，因而直接在有关的
+.\assets\scss\partials\sidebar.scss和\layouts\partials\sidebar\left.html里指定图标即可:&lt;/p>
+&lt;p>(1) 在**.\assets\scss\partials\sidebar.scss**中，修改代码为下面这样：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-scss" data-lang="scss">&lt;span class="line">&lt;span class="cl">&lt;span class="o">[&lt;/span>&lt;span class="nt">data-scheme&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;dark&amp;#34;&lt;/span>&lt;span class="o">]&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nn">#dark-mode-toggle&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">color&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nf">var&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="n">accent-color&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">font-weight&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">700&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nc">.icon-tabler-sun-high&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">display&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="ni">none&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nc">.icon-tabler-moon-stars&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">display&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="ni">unset&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nn">#dark-mode-toggle&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">margin-top&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="ni">auto&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">color&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nf">var&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="n">body-text-color&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">display&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="ni">flex&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">align-items&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="ni">center&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">cursor&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="ni">pointer&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">gap&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nf">var&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="ni">menu&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="ni">icon&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">separation&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nc">.icon-tabler-moon-stars&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">display&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="ni">none&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>(2)在**\layouts\partials\sidebar\left.html**中，修改代码为下面这样，用于修改图标&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">{{ if (default false .Site.Params.colorScheme.toggle) }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;dark-mode-toggle&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ partial &amp;#34;helper/icon&amp;#34; &amp;#34;sun-high&amp;#34; }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ partial &amp;#34;helper/icon&amp;#34; &amp;#34;moon-stars&amp;#34; }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">span&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>{{ T &amp;#34;darkMode&amp;#34; }}&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">span&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{ end }}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;em>&lt;strong>(3)修改白天/黑夜模式的文字&lt;/strong>&lt;/em>&lt;/p>
+&lt;p>\i18n\zh-cn.yaml中修改即可&lt;/p>
+&lt;h2 id="ednhugo-优化">EDN.hugo 优化
+&lt;/h2>&lt;ol>
+&lt;li>&lt;del>时间格式format为jul 7, 2025&lt;/del>&lt;/li>
+&lt;li>&lt;del>将link显示改成2栏&lt;/del>&lt;/li>
+&lt;li>&lt;del>设置自己的blog头像、网页小图标&lt;/del>&lt;/li>
+&lt;li>&lt;del>设置Copyright © 2025 etherealzoom&lt;/del>&lt;/li>
+&lt;li>&lt;del>剔除中英文模式，留中文模式作为默认，后续自己添加内容&lt;/del> &lt;br>
+about部分可以中英文，一式两份&lt;/li>
+&lt;li>&lt;del>保留默认colorScheme，白天/黑夜模式&lt;/del>&lt;/li>
+&lt;li>&lt;del>改善白天模式的可读性&lt;/del>&lt;/li>
+&lt;li>更改白天/黑夜模式图标&lt;/li>
+&lt;li>&lt;del>新建一个repository作为图床&lt;/del>&lt;/li>
+&lt;li>&lt;del>开启GitHub Actions&lt;/del>&lt;/li>
+&lt;li>评论系统推荐giscus, better than utyerance评论系统&lt;/li>
+&lt;li>加音乐播放器：Aplayer + MetingJs(优先级很低)&lt;/li>
+&lt;li>&lt;/li>
 &lt;/ol></description></item><item><title>About</title><link>https://etherealzoom.github.io/blog/about/</link><pubDate>Mon, 07 Jul 2025 00:00:00 +0000</pubDate><guid>https://etherealzoom.github.io/blog/about/</guid><description>&lt;p>&lt;em>&lt;strong>University:&lt;/strong>&lt;/em> Sun Yat-sen University, Guangzhou, China&lt;/p>
 &lt;p>&lt;em>&lt;strong>major:&lt;/strong>&lt;/em> Microelectronics Science and Engineering&lt;/p></description></item><item><title>Archives</title><link>https://etherealzoom.github.io/blog/archives/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://etherealzoom.github.io/blog/archives/</guid><description/></item><item><title>Links</title><link>https://etherealzoom.github.io/blog/links/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://etherealzoom.github.io/blog/links/</guid><description>&lt;!-- To use this feature, add `links` section to frontmatter.
 This page's frontmatter: -->
