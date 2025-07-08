@@ -25,7 +25,8 @@
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="o">**&lt;/span>&lt;span class="err">添加子文件夹及其内容至暂存区&lt;/span>&lt;span class="o">**&lt;/span>&lt;span class="err">：&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">使用`&lt;/span>&lt;span class="n">git&lt;/span> &lt;span class="n">add&lt;/span>&lt;span class="err">`命令，配合递归通配符`&lt;/span>&lt;span class="o">**&lt;/span>&lt;span class="err">`来添加子文件夹及其内部的所有文件。假设子文件夹名为`&lt;/span>&lt;span class="n">subfolder&lt;/span>&lt;span class="err">`，执行：&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">git&lt;/span> &lt;span class="n">add&lt;/span> &lt;span class="n">subfolder&lt;/span>&lt;span class="cm">/**
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">//显示差异摘要（每个提交修改的文件及行数统计）：
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>用户资料部分&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">//显示差异摘要（每个提交修改的文件及行数统计）：
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="n">git&lt;/span> &lt;span class="n">log&lt;/span> &lt;span class="o">--&lt;/span>&lt;span class="n">author&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;当前用户名&amp;#34;&lt;/span> &lt;span class="o">--&lt;/span>&lt;span class="n">stat&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">//以图形化方式展示分支历史
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="n">git&lt;/span> &lt;span class="n">log&lt;/span> &lt;span class="o">--&lt;/span>&lt;span class="n">author&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;当前用户名&amp;#34;&lt;/span> &lt;span class="o">--&lt;/span>&lt;span class="n">graph&lt;/span>
@@ -34,28 +35,27 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="git文件恢复">git文件恢复
 &lt;/h2>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">//没有add的文件恢复，一个一个恢复
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="n">git&lt;/span> &lt;span class="n">checkout&lt;/span> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="err">文件名&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">//有add，无commit
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="n">git&lt;/span> &lt;span class="n">checkout&lt;/span> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">commit&lt;/span> &lt;span class="n">id&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="err">文件名&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#id使用git log查看
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">//已经commit
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="c1">//已经commit
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="n">git&lt;/span> &lt;span class="n">checkout&lt;/span> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">commit&lt;/span> &lt;span class="n">id&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="err">文件名&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img src="https://raw.githubusercontent.com/etherealzoom/blog_img/main/Pic/Git_Flow.png"
 loading="lazy"
 >&lt;/p>
-&lt;p>知识点
-1）&lt;/p>
+&lt;p>知识点&lt;/p>
+&lt;ol>
+&lt;li>哈希值&lt;/li>
+&lt;/ol>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="nf">f7cafda&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">HEAD&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">master&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="err">重新提交有关&lt;/span>&lt;span class="n">tc264开发的相关资料&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">d01e0e1&lt;/span> &lt;span class="err">提交有关&lt;/span>&lt;span class="n">tc264开发的相关资料&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">前面的一串数字是什么意思&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">答：&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">前面的一串数字是哈希值，它是一个由&lt;/span> &lt;span class="mi">40&lt;/span> &lt;span class="err">个十六进制字符组成的字符串，用来唯一标识每一次提交。&lt;/span>&lt;span class="n">Git&lt;/span> &lt;span class="err">通过计算提交的内容、作者、日期等信息的&lt;/span> &lt;span class="n">SHA&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span> &lt;span class="err">散列值来生成这个哈希值&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="2">
-&lt;li>&lt;/li>
+&lt;li>(HEAD -&amp;gt; master)是什么&lt;/li>
 &lt;/ol>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="p">(&lt;/span>&lt;span class="n">HEAD&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">master&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="err">是什么&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">答：&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="err">答：&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">(&lt;/span>&lt;span class="n">HEAD&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">master&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="err">是&lt;/span>&lt;span class="n">Git中的一种表示方式&lt;/span>&lt;span class="err">，它表示&lt;/span>&lt;span class="n">HEAD指向master分支&lt;/span>&lt;span class="err">，而&lt;/span>&lt;span class="n">master分支指向最新的提交&lt;/span>&lt;span class="err">。&lt;/span>&lt;span class="n">HEAD是一个特殊的引用&lt;/span>&lt;span class="err">，它总是指向当前的提交，而&lt;/span>&lt;span class="n">master是一个普通的分支&lt;/span>&lt;span class="err">，它可以指向任何一个提交。当你在&lt;/span>&lt;span class="n">master分支上进行提交时&lt;/span>&lt;span class="err">，&lt;/span>&lt;span class="nf">HEAD和master都会移动到最新的提交上&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nl">https&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="c1">//zhuanlan.zhihu.com/p/40001702)
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="err">关于&lt;/span>&lt;span class="n">Git分支中HEAD和Master的理解&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nl">https&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="c1">//zhuanlan.zhihu.com/p/40001702)[: 关于Git分支中HEAD和Master的理解 - 知乎](https://www.jianshu.com/p/4219b6f62ce3)
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>3）解释git push -u origin master&lt;/p>
