@@ -276,7 +276,7 @@ loading="lazy"
 &lt;/ul>
 &lt;p>未来若能在“文化疲劳周期”（约3-5年）内完成向“生活方式平台”的转型（如拓展茶器、茶礼、茶空间衍生品），或将成为首个突破千亿市值的新茶饮品牌。&lt;/p></description></item><item><title>hugo depoly</title><link>https://etherealzoom.github.io/blog/p/hugo-depoly/</link><pubDate>Mon, 07 Jul 2025 20:16:23 +0800</pubDate><guid>https://etherealzoom.github.io/blog/p/hugo-depoly/</guid><description>&lt;h1 id="hugo-need-install-weight">hugo need install weight
 &lt;/h1>&lt;ol>
-&lt;li>utyerance评论系统&lt;/li>
+&lt;li>评论系统推荐giscus, better than utyerance评论系统&lt;/li>
 &lt;li>加音乐播放器：Aplayer + MetingJs&lt;/li>
 &lt;li>widgets homepage 小组件&lt;/li>
 &lt;li>opengraph
