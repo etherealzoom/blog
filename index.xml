@@ -1,481 +1,129 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>etherealzoom</title>
-        <link>https://etherealzoom.github.io/blog/</link>
-        <description>Recent content on etherealzoom</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>zh-cn</language>
-        <copyright>etherealzoom</copyright>
-        <lastBuildDate>Tue, 08 Jul 2025 02:15:15 +0800</lastBuildDate><atom:link href="https://etherealzoom.github.io/blog/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Git_use</title>
-        <link>https://etherealzoom.github.io/blog/p/git_use/</link>
-        <pubDate>Tue, 08 Jul 2025 02:15:15 +0800</pubDate>
-        
-        <guid>https://etherealzoom.github.io/blog/p/git_use/</guid>
-        <description>&lt;p&gt;&lt;strong&gt;命令&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;# 初始化一个本地仓库
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;git&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;init&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;# 添加所有文件到暂存区
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;git&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;add&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;# 提交暂存区的文件到本地仓库，并添加一条提交信息
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;git&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;commit&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;m&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;first commit&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;# 添加一个远程仓库的地址，命名为origin
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;git&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;remote&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;add&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;origin&lt;/span&gt; &lt;span class=&#34;nl&#34;&gt;https&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//github.com/user/repo.git
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;# 将本地仓库的内容推送到远程仓库的master分支
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;git&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;push&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;u&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;origin&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;master&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#查看当前缓存区的all内容
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;git&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ls&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;files&lt;/span&gt;   
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#delete a cangku 的所有提交记录
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;***&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;创建一个新的孤立分支，并切换到该分支：`&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;git&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;checkout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;--&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;orphan&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;latest_branch&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;`&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;删除原来的&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;master分支&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;：`&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;git&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;branch&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;D&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;master&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;`&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;重命名当前分支为&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;master&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;：`&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;git&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;branch&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;m&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;master&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;`&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;强制推送当前分支到远程仓库：`&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;git&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;push&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;origin&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;master&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;`&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;**&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;该操作不可逆&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;***&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#查看当前分支数量以及名称
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;git&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;branch&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#怎么上传一个.git所在文件中的文件夹里面的所有文件
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;**&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;添加子文件夹及其内容至暂存区&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;**&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;：&lt;/span&gt; 
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;使用`&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;git&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;`命令，配合递归通配符`&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;**&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;`来添加子文件夹及其内部的所有文件。假设子文件夹名为`&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;subfolder&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;`，执行：&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;git&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;add&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;subfolder&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;/**
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//显示差异摘要（每个提交修改的文件及行数统计）：
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;git&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;log&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;--&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;author&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;当前用户名&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;--&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;stat&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//以图形化方式展示分支历史
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;git&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;log&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;--&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;author&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;当前用户名&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;--&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;graph&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//- 显示完整的提交消息：
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;git&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;log&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;--&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;author&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;当前用户名&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;--&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pretty&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;format&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%h %s&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;git文件恢复&#34;&gt;git文件恢复
-&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//没有add的文件恢复，一个一个恢复
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;git&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;checkout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;文件名&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//有add，无commit
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;git&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;checkout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;commit&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;文件名&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#id使用git log查看
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//已经commit
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;git&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;checkout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;commit&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;文件名&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;![[Pasted image 20240414204413.png]]&lt;/p&gt;
-&lt;p&gt;知识点
-1）&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;f7cafda&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;HEAD&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;master&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;重新提交有关&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tc264开发的相关资料&lt;/span&gt; 
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;d01e0e1&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;提交有关&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tc264开发的相关资料&lt;/span&gt; 
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;前面的一串数字是什么意思&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;答：&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;前面的一串数字是哈希值，它是一个由&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;40&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;个十六进制字符组成的字符串，用来唯一标识每一次提交。&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Git&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;通过计算提交的内容、作者、日期等信息的&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;SHA&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;散列值来生成这个哈希值&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;HEAD&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;master&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;是什么&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;答：&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;HEAD&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;master&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;是&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Git中的一种表示方式&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;，它表示&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;HEAD指向master分支&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;，而&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;master分支指向最新的提交&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;。&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;HEAD是一个特殊的引用&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;，它总是指向当前的提交，而&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;master是一个普通的分支&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;，它可以指向任何一个提交。当你在&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;master分支上进行提交时&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;，&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;HEAD和master都会移动到最新的提交上&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;https&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//zhuanlan.zhihu.com/p/40001702)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;关于&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Git分支中HEAD和Master的理解&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;https&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//zhuanlan.zhihu.com/p/40001702)[: 关于Git分支中HEAD和Master的理解 - 知乎](https://www.jianshu.com/p/4219b6f62ce3)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;3）解释git push -u origin master&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;git是一个分布式版本控制系统&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;，可以用来管理和协作项目的源代码。&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;push是一个git子命令&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;，它的作用是将本地仓库的内容推送到远程仓库的指定分支。&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;u是一个参数&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;，它的全称是–&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;upstream&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;，它的作用是设置默认的上游分支，也就是当你在本地仓库执行&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;git&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pull或git&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;push时&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;，不需要指定远程仓库和分支名，&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;git会自动使用你设置的上游分支&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;。&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;origin是一个远程仓库的名称&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;，它是&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;git默认给你添加的远程仓库的别名&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;，你可以使用&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;git&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;remote命令来查看或修改你的远程仓库的名称&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;。&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;master是一个分支的名称&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;，它是&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;git默认给你创建的本地分支的名称&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;，你可以使用&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;git&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;branch命令来查看或修改你的本地分支的名称&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;。&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;4）上传文件到gitee
-&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/fayoung3568/article/details/119488325&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://blog.csdn.net/fayoung3568/article/details/119488325&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;5）git pull and git pull &amp;ndash;rebase
-&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV1dH4y1g7tn/?vd_source=d7d8561214ca72d815e8ee788ea8c86b&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://www.bilibili.com/video/BV1dH4y1g7tn/?vd_source=d7d8561214ca72d815e8ee788ea8c86b&lt;/a&gt;&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>霸王茶姬</title>
-        <link>https://etherealzoom.github.io/blog/p/%E9%9C%B8%E7%8E%8B%E8%8C%B6%E5%A7%AC/</link>
-        <pubDate>Tue, 08 Jul 2025 00:50:42 +0800</pubDate>
-        
-        <guid>https://etherealzoom.github.io/blog/p/%E9%9C%B8%E7%8E%8B%E8%8C%B6%E5%A7%AC/</guid>
-        <description>&lt;p&gt;CEO  张俊杰&lt;/p&gt;
-&lt;p&gt;2017年，张俊杰模仿着茶颜悦色在云南开出第一家门店。当时他是羡慕着茶颜悦色，但由于茶颜悦色的奶茶原材料过于多样，进而导致供应链较为复杂（这也是茶颜悦色门店数量较少的一个重要原因：因为需要控制产品质量，市场规则所决定的不允许通过加盟的做法快速扩张）。而张俊杰一开始就想着多开门店，假如供应链过于复杂，那么对多开门店这个做法是起反作用的，所以张俊杰决定从市面上早已有成熟标准的原叶茶和鲜牛奶入手，简单的原材料意味着供应链的简单，展现了通过加盟制度快速扩张的可能性。&lt;/p&gt;
-&lt;p&gt;有了扩张的可能性，那么怎么实现快速扩张呢？
-很重要的一个原因是张俊杰擅长造梦，擅长让他人相信一年回本，两年富裕。且张俊杰野心还很大，怀着“在全球100个国家卖出150亿杯”以及“在中国超越星巴克”的目标，也给那些加盟的人有了很大的驱动力。&lt;/p&gt;
-&lt;p&gt;还有一个原因是，霸王茶姬的东方文化元素极多，包括但不限于马面裙等，这也给在这样一个国潮兴起的时势下那些追求潮流的年轻人提供了交流的话题等等。&lt;/p&gt;
-&lt;p&gt;————————
-以下是deepseek拓展：&lt;/p&gt;
-&lt;p&gt;以下是基于&amp;quot;&lt;strong&gt;战略定位精准+供应链优化+文化赋能+资本驱动&lt;/strong&gt;&amp;ldquo;复合模型对霸王茶姬商业模式的系统性分析：&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;一战略定位精准锚定东方星巴克的差异化路径&#34;&gt;&lt;strong&gt;一、战略定位精准：锚定“东方星巴克”的差异化路径&lt;/strong&gt;
-&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;目标市场错位竞争&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;对标星巴克文化符号&lt;/strong&gt;：将茶饮从“解渴消费品”升级为“文化载体”，通过“东方美学空间+标准化产品”组合，抢占星巴克未能覆盖的“国风第三空间”空白市场。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;价格带卡位&lt;/strong&gt;：主力产品定价15-20元，介于蜜雪冰城（10元以下）与喜茶（25-30元）之间，精准覆盖新中产消费升级需求。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;产品极简主义&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;爆款逻辑&lt;/strong&gt;：将80%资源集中于“伯牙绝弦”“桂馥兰香”等5款SKU，实现单店日均出品效率400杯（行业平均250杯）。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;去地域化配方&lt;/strong&gt;：通过降低糖度、减少地域特色原料（如云南玫瑰），使产品适配全球口味，海外门店复购率提升至35%。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;二供应链优化构建成本-效率-规模飞轮&#34;&gt;&lt;strong&gt;二、供应链优化：构建“成本-效率-规模”飞轮&lt;/strong&gt;
-&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;上游集约化采购&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;原料锁定协议&lt;/strong&gt;：与云南普洱茶庄园签订“期货采购”（提前3年锁定60%产能），原料成本较市场价低22%。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;跨品类整合&lt;/strong&gt;：通过蒙牛定制鲜奶产线，将乳制品损耗率从8%降至3.5%，实现“茶+奶”双供应链协同。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;中台数字化管控&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;智能排产系统&lt;/strong&gt;：基于历史销售数据+天气预测，动态调整区域分仓配货量，库存周转天数压缩至5.8天（行业平均12天）。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;IoT设备监控&lt;/strong&gt;：在5000+门店部署物联网传感器，实时监测冷藏温度、设备状态，故障响应时间缩短至2小时。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;下游轻资产扩张&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;“中央厨房+卫星店”模式&lt;/strong&gt;：在省会城市设立中央厨房覆盖半径300公里内的加盟店，单店后厨面积减少60%，租金成本下降18%。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;三文化赋能从产品消费到符号消费的升维&#34;&gt;&lt;strong&gt;三、文化赋能：从“产品消费”到“符号消费”的升维&lt;/strong&gt;
-&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;文化符号的工业化复制&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;视觉系统标准化&lt;/strong&gt;：将故宫纹样、戏曲脸谱等元素拆解为可批量应用的模块（如杯身图案库含120种组合），设计成本降低74%。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;场景化营销&lt;/strong&gt;：在成都春熙路旗舰店引入“茶艺剧场”，将点茶流程戏剧化表演，单店客单价提升26%。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;亚文化圈层裂变&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;汉服社群运营&lt;/strong&gt;：推出“买茶饮送马面裙配饰”活动，联动全国200+汉服社团，带动相关门店销售额增长41%。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;元宇宙试水&lt;/strong&gt;：发行“千里江山图”数字茶票NFT，持有者可兑换限定产品，3天内售罄并吸引12万Z世代用户注册会员。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;全球化文化适配&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;在地化改造&lt;/strong&gt;：在马来西亚将“伯牙绝弦”改名为“Jasmine Tea Latte”，融合拉茶工艺，成为当地TikTok饮品榜TOP3。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;四资本驱动构建加盟-金融-生态三位一体模型&#34;&gt;&lt;strong&gt;四、资本驱动：构建“加盟-金融-生态”三位一体模型&lt;/strong&gt;
-&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;加盟商杠杆化扩张&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;现金流游戏规则&lt;/strong&gt;：收取加盟费（38万/店）+供应链利润（原料加价15%）+抽成（营业额3%），单店年均贡献收入超50万元。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;加盟商分级激励&lt;/strong&gt;：设立“城市合伙人”制度，头部加盟商可参股区域子公司，年化收益率可达30%。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;资本工具创新&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;ABS资产证券化&lt;/strong&gt;：将优质门店未来现金流打包发行债券，2023年融资8亿元用于东南亚市场拓展。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;供应链金融&lt;/strong&gt;：通过“仓单质押”为中小加盟商提供低息贷款，贷款余额年增速达220%。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;生态型投资布局&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;跨界控股&lt;/strong&gt;：收购云南普洱茶厂、参股冷链物流公司，控制产业链关键节点，综合毛利率提升至68%。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;战略联盟&lt;/strong&gt;：与字节跳动合作开发“AI茶艺师”小程序，实现精准营销投放ROI达1:7.3。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;模型协同效应分析&#34;&gt;&lt;strong&gt;模型协同效应分析&lt;/strong&gt;
-&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;战略与供应链联动&lt;/strong&gt;：极简产品战略降低供应链复杂度→支撑快速加盟扩张→规模效应反哺供应链议价能力。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;文化与资本共振&lt;/strong&gt;：国潮IP吸引年轻客群→提升单店营收→吸引更多加盟商→资本加速门店网络扩张→文化影响力进一步放大。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;风险对冲机制&lt;/strong&gt;：通过供应链控制（原料锁价）、文化多样性（全球化改造）、资本工具（ABS）构建抗周期能力。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;结论新茶饮20时代的范式创新&#34;&gt;&lt;strong&gt;结论：新茶饮2.0时代的范式创新&lt;/strong&gt;
-&lt;/h3&gt;&lt;p&gt;霸王茶姬的复合模型本质是**“用文化溢价覆盖供应链成本，用资本杠杆放大规模效应”**，其核心壁垒在于：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;文化资产的可复制性&lt;/strong&gt;（如马面裙设计无需高成本迭代）&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;供应链的强控制力&lt;/strong&gt;（从茶园到茶杯的垂直整合）&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;资本参与的深度绑定&lt;/strong&gt;（加盟商既是投资者又是传播者）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;未来若能在“文化疲劳周期”（约3-5年）内完成向“生活方式平台”的转型（如拓展茶器、茶礼、茶空间衍生品），或将成为首个突破千亿市值的新茶饮品牌。&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>hugo depoly</title>
-        <link>https://etherealzoom.github.io/blog/p/hugo-depoly/</link>
-        <pubDate>Mon, 07 Jul 2025 20:16:23 +0800</pubDate>
-        
-        <guid>https://etherealzoom.github.io/blog/p/hugo-depoly/</guid>
-        <description>&lt;h1 id=&#34;hugo-need-install-weight&#34;&gt;hugo need install weight
-&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;utyerance评论系统&lt;/li&gt;
-&lt;li&gt;加音乐播放器：Aplayer  +  MetingJs&lt;/li&gt;
-&lt;li&gt;widgets homepage 小组件&lt;/li&gt;
-&lt;li&gt;opengraph
-这部分是用来配置 Open Graph协议 的，它能让你自定义当网站链接被分享到社交媒体（如 Twitter, Facebook, Telegram 等）时，显示的预览卡片样式。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;twitter:&lt;/p&gt;
-&lt;p&gt;site: 在这里填写你的 Twitter 用户名（例如 @hugo_rocks）。当你的文章被分享时，卡片上会显示 &amp;ldquo;via @你的用户名&amp;rdquo;。&lt;/p&gt;
-&lt;p&gt;card: 设置 Twitter 卡片的样式。&lt;/p&gt;
-&lt;p&gt;summary_large_image: 显示一张大的特色图片，下方是标题和描述（推荐）。&lt;/p&gt;
-&lt;p&gt;summary: 显示一张小方形图片，标题和描述在右侧&lt;/p&gt;
-&lt;ol start=&#34;5&#34;&gt;
-&lt;li&gt;defaultImage
-这里用来设置一个默认的社交分享图片。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;如果某篇文章没有指定自己的特色图片（featured_image），那么当这篇文章被分享时，就会使用这里设置的默认图片。&lt;/p&gt;
-&lt;p&gt;opengraph:&lt;/p&gt;
-&lt;p&gt;enabled: false 设为 true 来启用这个功能。&lt;/p&gt;
-&lt;p&gt;local: false 如果你的默认图片存放在 Hugo 网站的 static 文件夹下，就设为 true。如果图片是通过一个完整的 URL 链接引用的，就设为 false。&lt;/p&gt;
-&lt;p&gt;src: 填写图片的路径或完整的 URL。&lt;/p&gt;
-&lt;p&gt;如果 local: true，这里填相对路径，如 images/default-cover.jpg。&lt;/p&gt;
-&lt;p&gt;如果 local: false，这里填完整 URL，如 &lt;a class=&#34;link&#34; href=&#34;https://example.com/images/default-cover.jpg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://example.com/images/default-cover.jpg&lt;/a&gt;。&lt;/p&gt;
-&lt;ol start=&#34;6&#34;&gt;
-&lt;li&gt;colorScheme
-这部分控制网站的主题颜色模式（白天/黑夜模式）。
-toggle: true
-设为 true 会在网站上显示一个切换按钮 ☀️/🌙，让访问者可以手动在浅色和深色模式之间切换。
-default: auto
-设置网站的默认颜色模式。
-auto: （推荐） 自动根据访问者操作系统的设置来显示浅色或深色模式。
-light: 强制默认显示浅色模式。
-dark: 强制默认显示深色模式。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h1 id=&#34;github-action&#34;&gt;GitHub action
-&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;需要到github账户的developer生成TOKEN（目前是有限期一年）&lt;/li&gt;
-&lt;li&gt;然后到blog的main仓库的设置添加token并命名为TOKEN，这是因为在本地文件的yaml文件里面的名字是TOKEN，这样可以不改此文件。
-在hugo主文件创建一个.github/workflows/xxxx.yaml文件，将以下内容复制进去:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;deploy&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 代码提交到main分支时触发github action&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;on&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;push&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;branches&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;- &lt;span class=&#34;l&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;jobs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;deploy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;runs-on&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;ubuntu-latest&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;steps&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;Checkout&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;uses&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;actions/checkout@v4&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;with&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;              &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;fetch-depth&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;Setup Hugo&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;uses&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;peaceiris/actions-hugo@v3&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;with&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;              &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;hugo-version&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;latest&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;              &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;extended&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;Build Web&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;run&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;hugo -D&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;Deploy Web&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;uses&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;peaceiris/actions-gh-pages@v4&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;with&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;              &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;PERSONAL_TOKEN&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;${{ secrets.你的token变量名 }}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;              &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;EXTERNAL_REPOSITORY&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;你的github名/你的仓库名&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;              &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;PUBLISH_BRANCH&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;              &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;PUBLISH_DIR&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;./public&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;              &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;commit_message&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;auto deploy&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;当有新文章后，在本地main推送上github，不是在那个public的文件&lt;/li&gt;
-&lt;li&gt;推送上去之后，会自动GitHub Actions，修改blog网页的仓库，进而修改个人博客内容。&lt;/li&gt;
-&lt;li&gt;Github action的好处是，不需要在public的文件夹内提交到GitHub上了，只需要在main文件夹即可。&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-        </item>
-        <item>
-        <title>About</title>
-        <link>https://etherealzoom.github.io/blog/about/</link>
-        <pubDate>Mon, 07 Jul 2025 00:00:00 +0000</pubDate>
-        
-        <guid>https://etherealzoom.github.io/blog/about/</guid>
-        <description>&lt;p&gt;&lt;em&gt;&lt;strong&gt;University:&lt;/strong&gt;&lt;/em&gt;  Sun Yat-sen University, Guangzhou, China&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;major:&lt;/strong&gt;&lt;/em&gt;       Microelectronics Science and Engineering&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>Archives</title>
-        <link>https://etherealzoom.github.io/blog/archives/</link>
-        <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
-        
-        <guid>https://etherealzoom.github.io/blog/archives/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Links</title>
-        <link>https://etherealzoom.github.io/blog/links/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://etherealzoom.github.io/blog/links/</guid>
-        <description>&lt;!-- To use this feature, add `links` section to frontmatter.
-
-This page&#39;s frontmatter: --&gt;
-&lt;!-- ```yaml --&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>etherealzoom</title><link>https://etherealzoom.github.io/blog/</link><description>Recent content on etherealzoom</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>etherealzoom</copyright><lastBuildDate>Tue, 08 Jul 2025 00:50:42 +0800</lastBuildDate><atom:link href="https://etherealzoom.github.io/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>霸王茶姬</title><link>https://etherealzoom.github.io/blog/p/%E9%9C%B8%E7%8E%8B%E8%8C%B6%E5%A7%AC/</link><pubDate>Tue, 08 Jul 2025 00:50:42 +0800</pubDate><guid>https://etherealzoom.github.io/blog/p/%E9%9C%B8%E7%8E%8B%E8%8C%B6%E5%A7%AC/</guid><description>&lt;p>CEO 张俊杰&lt;/p>
+&lt;p>2017年，张俊杰模仿着茶颜悦色在云南开出第一家门店。当时他是羡慕着茶颜悦色，但由于茶颜悦色的奶茶原材料过于多样，进而导致供应链较为复杂（这也是茶颜悦色门店数量较少的一个重要原因：因为需要控制产品质量，市场规则所决定的不允许通过加盟的做法快速扩张）。而张俊杰一开始就想着多开门店，假如供应链过于复杂，那么对多开门店这个做法是起反作用的，所以张俊杰决定从市面上早已有成熟标准的原叶茶和鲜牛奶入手，简单的原材料意味着供应链的简单，展现了通过加盟制度快速扩张的可能性。&lt;/p>
+&lt;p>有了扩张的可能性，那么怎么实现快速扩张呢？
+很重要的一个原因是张俊杰擅长造梦，擅长让他人相信一年回本，两年富裕。且张俊杰野心还很大，怀着“在全球100个国家卖出150亿杯”以及“在中国超越星巴克”的目标，也给那些加盟的人有了很大的驱动力。&lt;/p>
+&lt;p>还有一个原因是，霸王茶姬的东方文化元素极多，包括但不限于马面裙等，这也给在这样一个国潮兴起的时势下那些追求潮流的年轻人提供了交流的话题等等。&lt;/p>
+&lt;p>————————
+以下是deepseek拓展：&lt;/p>
+&lt;p>以下是基于&amp;quot;&lt;strong>战略定位精准+供应链优化+文化赋能+资本驱动&lt;/strong>&amp;ldquo;复合模型对霸王茶姬商业模式的系统性分析：&lt;/p>
+&lt;hr>
+&lt;h3 id="一战略定位精准锚定东方星巴克的差异化路径">&lt;strong>一、战略定位精准：锚定“东方星巴克”的差异化路径&lt;/strong>
+&lt;/h3>&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>目标市场错位竞争&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>对标星巴克文化符号&lt;/strong>：将茶饮从“解渴消费品”升级为“文化载体”，通过“东方美学空间+标准化产品”组合，抢占星巴克未能覆盖的“国风第三空间”空白市场。&lt;/li>
+&lt;li>&lt;strong>价格带卡位&lt;/strong>：主力产品定价15-20元，介于蜜雪冰城（10元以下）与喜茶（25-30元）之间，精准覆盖新中产消费升级需求。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>产品极简主义&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>爆款逻辑&lt;/strong>：将80%资源集中于“伯牙绝弦”“桂馥兰香”等5款SKU，实现单店日均出品效率400杯（行业平均250杯）。&lt;/li>
+&lt;li>&lt;strong>去地域化配方&lt;/strong>：通过降低糖度、减少地域特色原料（如云南玫瑰），使产品适配全球口味，海外门店复购率提升至35%。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;h3 id="二供应链优化构建成本-效率-规模飞轮">&lt;strong>二、供应链优化：构建“成本-效率-规模”飞轮&lt;/strong>
+&lt;/h3>&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>上游集约化采购&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>原料锁定协议&lt;/strong>：与云南普洱茶庄园签订“期货采购”（提前3年锁定60%产能），原料成本较市场价低22%。&lt;/li>
+&lt;li>&lt;strong>跨品类整合&lt;/strong>：通过蒙牛定制鲜奶产线，将乳制品损耗率从8%降至3.5%，实现“茶+奶”双供应链协同。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>中台数字化管控&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>智能排产系统&lt;/strong>：基于历史销售数据+天气预测，动态调整区域分仓配货量，库存周转天数压缩至5.8天（行业平均12天）。&lt;/li>
+&lt;li>&lt;strong>IoT设备监控&lt;/strong>：在5000+门店部署物联网传感器，实时监测冷藏温度、设备状态，故障响应时间缩短至2小时。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>下游轻资产扩张&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>“中央厨房+卫星店”模式&lt;/strong>：在省会城市设立中央厨房覆盖半径300公里内的加盟店，单店后厨面积减少60%，租金成本下降18%。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;h3 id="三文化赋能从产品消费到符号消费的升维">&lt;strong>三、文化赋能：从“产品消费”到“符号消费”的升维&lt;/strong>
+&lt;/h3>&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>文化符号的工业化复制&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>视觉系统标准化&lt;/strong>：将故宫纹样、戏曲脸谱等元素拆解为可批量应用的模块（如杯身图案库含120种组合），设计成本降低74%。&lt;/li>
+&lt;li>&lt;strong>场景化营销&lt;/strong>：在成都春熙路旗舰店引入“茶艺剧场”，将点茶流程戏剧化表演，单店客单价提升26%。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>亚文化圈层裂变&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>汉服社群运营&lt;/strong>：推出“买茶饮送马面裙配饰”活动，联动全国200+汉服社团，带动相关门店销售额增长41%。&lt;/li>
+&lt;li>&lt;strong>元宇宙试水&lt;/strong>：发行“千里江山图”数字茶票NFT，持有者可兑换限定产品，3天内售罄并吸引12万Z世代用户注册会员。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>全球化文化适配&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>在地化改造&lt;/strong>：在马来西亚将“伯牙绝弦”改名为“Jasmine Tea Latte”，融合拉茶工艺，成为当地TikTok饮品榜TOP3。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;h3 id="四资本驱动构建加盟-金融-生态三位一体模型">&lt;strong>四、资本驱动：构建“加盟-金融-生态”三位一体模型&lt;/strong>
+&lt;/h3>&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>加盟商杠杆化扩张&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>现金流游戏规则&lt;/strong>：收取加盟费（38万/店）+供应链利润（原料加价15%）+抽成（营业额3%），单店年均贡献收入超50万元。&lt;/li>
+&lt;li>&lt;strong>加盟商分级激励&lt;/strong>：设立“城市合伙人”制度，头部加盟商可参股区域子公司，年化收益率可达30%。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>资本工具创新&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>ABS资产证券化&lt;/strong>：将优质门店未来现金流打包发行债券，2023年融资8亿元用于东南亚市场拓展。&lt;/li>
+&lt;li>&lt;strong>供应链金融&lt;/strong>：通过“仓单质押”为中小加盟商提供低息贷款，贷款余额年增速达220%。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>生态型投资布局&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>跨界控股&lt;/strong>：收购云南普洱茶厂、参股冷链物流公司，控制产业链关键节点，综合毛利率提升至68%。&lt;/li>
+&lt;li>&lt;strong>战略联盟&lt;/strong>：与字节跳动合作开发“AI茶艺师”小程序，实现精准营销投放ROI达1:7.3。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;h3 id="模型协同效应分析">&lt;strong>模型协同效应分析&lt;/strong>
+&lt;/h3>&lt;ol>
+&lt;li>&lt;strong>战略与供应链联动&lt;/strong>：极简产品战略降低供应链复杂度→支撑快速加盟扩张→规模效应反哺供应链议价能力。&lt;/li>
+&lt;li>&lt;strong>文化与资本共振&lt;/strong>：国潮IP吸引年轻客群→提升单店营收→吸引更多加盟商→资本加速门店网络扩张→文化影响力进一步放大。&lt;/li>
+&lt;li>&lt;strong>风险对冲机制&lt;/strong>：通过供应链控制（原料锁价）、文化多样性（全球化改造）、资本工具（ABS）构建抗周期能力。&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;h3 id="结论新茶饮20时代的范式创新">&lt;strong>结论：新茶饮2.0时代的范式创新&lt;/strong>
+&lt;/h3>&lt;p>霸王茶姬的复合模型本质是**“用文化溢价覆盖供应链成本，用资本杠杆放大规模效应”**，其核心壁垒在于：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>文化资产的可复制性&lt;/strong>（如马面裙设计无需高成本迭代）&lt;/li>
+&lt;li>&lt;strong>供应链的强控制力&lt;/strong>（从茶园到茶杯的垂直整合）&lt;/li>
+&lt;li>&lt;strong>资本参与的深度绑定&lt;/strong>（加盟商既是投资者又是传播者）&lt;/li>
+&lt;/ul>
+&lt;p>未来若能在“文化疲劳周期”（约3-5年）内完成向“生活方式平台”的转型（如拓展茶器、茶礼、茶空间衍生品），或将成为首个突破千亿市值的新茶饮品牌。&lt;/p></description></item><item><title>About</title><link>https://etherealzoom.github.io/blog/about/</link><pubDate>Mon, 07 Jul 2025 00:00:00 +0000</pubDate><guid>https://etherealzoom.github.io/blog/about/</guid><description>&lt;p>&lt;em>&lt;strong>University:&lt;/strong>&lt;/em> Sun Yat-sen University, Guangzhou, China&lt;/p>
+&lt;p>&lt;em>&lt;strong>major:&lt;/strong>&lt;/em> Microelectronics Science and Engineering&lt;/p></description></item><item><title>Archives</title><link>https://etherealzoom.github.io/blog/archives/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://etherealzoom.github.io/blog/archives/</guid><description/></item><item><title>Links</title><link>https://etherealzoom.github.io/blog/links/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://etherealzoom.github.io/blog/links/</guid><description>&lt;!-- To use this feature, add `links` section to frontmatter.
+This page's frontmatter: -->
+&lt;!-- ```yaml -->
 &lt;!-- links:
-  - title: GitHub
-    description: GitHub is the world&#39;s largest software development platform.
-    website: https://github.com
-    image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
-  - title: TypeScript
-    description: TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
-    website: https://www.typescriptlang.org
-    image: ts-logo-128.jpg --&gt;
-&lt;!-- ``` --&gt;
-&lt;!-- `image` field accepts both local and external images. --&gt;</description>
-        </item>
-        <item>
-        <title>Search</title>
-        <link>https://etherealzoom.github.io/blog/search/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://etherealzoom.github.io/blog/search/</guid>
-        <description></description>
-        </item>
-        
-    </channel>
-</rss>
+- title: GitHub
+description: GitHub is the world's largest software development platform.
+website: https://github.com
+image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
+- title: TypeScript
+description: TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
+website: https://www.typescriptlang.org
+image: ts-logo-128.jpg -->
+&lt;!-- ``` -->
+&lt;!-- `image` field accepts both local and external images. --></description></item><item><title>Search</title><link>https://etherealzoom.github.io/blog/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://etherealzoom.github.io/blog/search/</guid><description/></item></channel></rss>
