@@ -1,35 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>项目管理 on etherealzoom</title><link>https://etherealzoom.github.io/blog/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/</link><description>Recent content in 项目管理 on etherealzoom</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>etherealzoom</copyright><lastBuildDate>Tue, 08 Jul 2025 02:15:15 +0800</lastBuildDate><atom:link href="https://etherealzoom.github.io/blog/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/index.xml" rel="self" type="application/rss+xml"/><item><title>Git_use</title><link>https://etherealzoom.github.io/blog/p/git_use/</link><pubDate>Tue, 08 Jul 2025 02:15:15 +0800</pubDate><guid>https://etherealzoom.github.io/blog/p/git_use/</guid><description>&lt;p>&lt;strong>命令&lt;/strong>&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
-&lt;/span>&lt;span class="lnt"> 2
-&lt;/span>&lt;span class="lnt"> 3
-&lt;/span>&lt;span class="lnt"> 4
-&lt;/span>&lt;span class="lnt"> 5
-&lt;/span>&lt;span class="lnt"> 6
-&lt;/span>&lt;span class="lnt"> 7
-&lt;/span>&lt;span class="lnt"> 8
-&lt;/span>&lt;span class="lnt"> 9
-&lt;/span>&lt;span class="lnt">10
-&lt;/span>&lt;span class="lnt">11
-&lt;/span>&lt;span class="lnt">12
-&lt;/span>&lt;span class="lnt">13
-&lt;/span>&lt;span class="lnt">14
-&lt;/span>&lt;span class="lnt">15
-&lt;/span>&lt;span class="lnt">16
-&lt;/span>&lt;span class="lnt">17
-&lt;/span>&lt;span class="lnt">18
-&lt;/span>&lt;span class="lnt">19
-&lt;/span>&lt;span class="lnt">20
-&lt;/span>&lt;span class="lnt">21
-&lt;/span>&lt;span class="lnt">22
-&lt;/span>&lt;span class="lnt">23
-&lt;/span>&lt;span class="lnt">24
-&lt;/span>&lt;span class="lnt">25
-&lt;/span>&lt;span class="lnt">26
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="cp"># 初始化一个本地仓库
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="cp"># 初始化一个本地仓库
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="n">git&lt;/span> &lt;span class="n">init&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp"># 添加所有文件到暂存区
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="n">git&lt;/span> &lt;span class="n">add&lt;/span> &lt;span class="p">.&lt;/span>
@@ -55,41 +25,14 @@
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="o">**&lt;/span>&lt;span class="err">添加子文件夹及其内容至暂存区&lt;/span>&lt;span class="o">**&lt;/span>&lt;span class="err">：&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">使用`&lt;/span>&lt;span class="n">git&lt;/span> &lt;span class="n">add&lt;/span>&lt;span class="err">`命令，配合递归通配符`&lt;/span>&lt;span class="o">**&lt;/span>&lt;span class="err">`来添加子文件夹及其内部的所有文件。假设子文件夹名为`&lt;/span>&lt;span class="n">subfolder&lt;/span>&lt;span class="err">`，执行：&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">git&lt;/span> &lt;span class="n">add&lt;/span> &lt;span class="n">subfolder&lt;/span>&lt;span class="cm">/**
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;span class="lnt">4
-&lt;/span>&lt;span class="lnt">5
-&lt;/span>&lt;span class="lnt">6
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">//显示差异摘要（每个提交修改的文件及行数统计）：
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">//显示差异摘要（每个提交修改的文件及行数统计）：
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="n">git&lt;/span> &lt;span class="n">log&lt;/span> &lt;span class="o">--&lt;/span>&lt;span class="n">author&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;当前用户名&amp;#34;&lt;/span> &lt;span class="o">--&lt;/span>&lt;span class="n">stat&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">//以图形化方式展示分支历史
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="n">git&lt;/span> &lt;span class="n">log&lt;/span> &lt;span class="o">--&lt;/span>&lt;span class="n">author&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;当前用户名&amp;#34;&lt;/span> &lt;span class="o">--&lt;/span>&lt;span class="n">graph&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">//- 显示完整的提交消息：
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="n">git&lt;/span> &lt;span class="n">log&lt;/span> &lt;span class="o">--&lt;/span>&lt;span class="n">author&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;当前用户名&amp;#34;&lt;/span> &lt;span class="o">--&lt;/span>&lt;span class="n">pretty&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nl">format&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="s">&amp;#34;%h %s&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h2 id="git文件恢复">git文件恢复
-&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;span class="lnt">4
-&lt;/span>&lt;span class="lnt">5
-&lt;/span>&lt;span class="lnt">6
-&lt;/span>&lt;span class="lnt">7
-&lt;/span>&lt;span class="lnt">8
-&lt;/span>&lt;span class="lnt">9
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">//没有add的文件恢复，一个一个恢复
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="git文件恢复">git文件恢复
+&lt;/h2>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">//没有add的文件恢复，一个一个恢复
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="n">git&lt;/span> &lt;span class="n">checkout&lt;/span> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="err">文件名&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">//有add，无commit
@@ -98,64 +41,30 @@
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">//已经commit
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="n">git&lt;/span> &lt;span class="n">checkout&lt;/span> &lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">commit&lt;/span> &lt;span class="n">id&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="err">文件名&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>&lt;img src="https://raw.githubusercontent.com/etherealzoom/blog_img/main/Pic/Git_Flow.png"
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img src="https://raw.githubusercontent.com/etherealzoom/blog_img/main/Pic/Git_Flow.png"
 loading="lazy"
 >&lt;/p>
 &lt;p>知识点
 1）&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;span class="lnt">4
-&lt;/span>&lt;span class="lnt">5
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="nf">f7cafda&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">HEAD&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">master&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="err">重新提交有关&lt;/span>&lt;span class="n">tc264开发的相关资料&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="nf">f7cafda&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">HEAD&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">master&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="err">重新提交有关&lt;/span>&lt;span class="n">tc264开发的相关资料&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">d01e0e1&lt;/span> &lt;span class="err">提交有关&lt;/span>&lt;span class="n">tc264开发的相关资料&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">前面的一串数字是什么意思&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">答：&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">前面的一串数字是哈希值，它是一个由&lt;/span> &lt;span class="mi">40&lt;/span> &lt;span class="err">个十六进制字符组成的字符串，用来唯一标识每一次提交。&lt;/span>&lt;span class="n">Git&lt;/span> &lt;span class="err">通过计算提交的内容、作者、日期等信息的&lt;/span> &lt;span class="n">SHA&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span> &lt;span class="err">散列值来生成这个哈希值&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;ol start="2">
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="2">
 &lt;li>&lt;/li>
 &lt;/ol>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;span class="lnt">4
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="p">(&lt;/span>&lt;span class="n">HEAD&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">master&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="err">是什么&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="p">(&lt;/span>&lt;span class="n">HEAD&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">master&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="err">是什么&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">答：&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">(&lt;/span>&lt;span class="n">HEAD&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="n">master&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="err">是&lt;/span>&lt;span class="n">Git中的一种表示方式&lt;/span>&lt;span class="err">，它表示&lt;/span>&lt;span class="n">HEAD指向master分支&lt;/span>&lt;span class="err">，而&lt;/span>&lt;span class="n">master分支指向最新的提交&lt;/span>&lt;span class="err">。&lt;/span>&lt;span class="n">HEAD是一个特殊的引用&lt;/span>&lt;span class="err">，它总是指向当前的提交，而&lt;/span>&lt;span class="n">master是一个普通的分支&lt;/span>&lt;span class="err">，它可以指向任何一个提交。当你在&lt;/span>&lt;span class="n">master分支上进行提交时&lt;/span>&lt;span class="err">，&lt;/span>&lt;span class="nf">HEAD和master都会移动到最新的提交上&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nl">https&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="c1">//zhuanlan.zhihu.com/p/40001702)
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="err">关于&lt;/span>&lt;span class="n">Git分支中HEAD和Master的理解&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nl">https&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="c1">//zhuanlan.zhihu.com/p/40001702)[: 关于Git分支中HEAD和Master的理解 - 知乎](https://www.jianshu.com/p/4219b6f62ce3)
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>3）解释git push -u origin master&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;span class="lnt">4
-&lt;/span>&lt;span class="lnt">5
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="o">-&lt;/span> &lt;span class="n">git是一个分布式版本控制系统&lt;/span>&lt;span class="err">，可以用来管理和协作项目的源代码。&lt;/span>
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>3）解释git push -u origin master&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="o">-&lt;/span> &lt;span class="n">git是一个分布式版本控制系统&lt;/span>&lt;span class="err">，可以用来管理和协作项目的源代码。&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">-&lt;/span> &lt;span class="n">push是一个git子命令&lt;/span>&lt;span class="err">，它的作用是将本地仓库的内容推送到远程仓库的指定分支。&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">-&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">u是一个参数&lt;/span>&lt;span class="err">，它的全称是–&lt;/span>&lt;span class="n">set&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">upstream&lt;/span>&lt;span class="err">，它的作用是设置默认的上游分支，也就是当你在本地仓库执行&lt;/span>&lt;span class="n">git&lt;/span> &lt;span class="n">pull或git&lt;/span> &lt;span class="n">push时&lt;/span>&lt;span class="err">，不需要指定远程仓库和分支名，&lt;/span>&lt;span class="n">git会自动使用你设置的上游分支&lt;/span>&lt;span class="err">。&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">-&lt;/span> &lt;span class="n">origin是一个远程仓库的名称&lt;/span>&lt;span class="err">，它是&lt;/span>&lt;span class="n">git默认给你添加的远程仓库的别名&lt;/span>&lt;span class="err">，你可以使用&lt;/span>&lt;span class="n">git&lt;/span> &lt;span class="n">remote命令来查看或修改你的远程仓库的名称&lt;/span>&lt;span class="err">。&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">-&lt;/span> &lt;span class="n">master是一个分支的名称&lt;/span>&lt;span class="err">，它是&lt;/span>&lt;span class="n">git默认给你创建的本地分支的名称&lt;/span>&lt;span class="err">，你可以使用&lt;/span>&lt;span class="n">git&lt;/span> &lt;span class="n">branch命令来查看或修改你的本地分支的名称&lt;/span>&lt;span class="err">。&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>4）上传文件到gitee
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>4）上传文件到gitee
 &lt;a class="link" href="https://blog.csdn.net/fayoung3568/article/details/119488325" target="_blank" rel="noopener"
 >https://blog.csdn.net/fayoung3568/article/details/119488325&lt;/a>&lt;/p>
 &lt;p>5）git pull and git pull &amp;ndash;rebase
