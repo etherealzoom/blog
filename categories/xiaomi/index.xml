@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Xiaomi on etherealzoom</title><link>https://etherealzoom.github.io/blog/categories/xiaomi/</link><description>Recent content in Xiaomi on etherealzoom</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>etherealzoom</copyright><lastBuildDate>Wed, 09 Jul 2025 21:56:37 +0800</lastBuildDate><atom:link href="https://etherealzoom.github.io/blog/categories/xiaomi/index.xml" rel="self" type="application/rss+xml"/><item><title>Xring</title><link>https://etherealzoom.github.io/blog/p/xring/</link><pubDate>Wed, 09 Jul 2025 21:56:37 +0800</pubDate><guid>https://etherealzoom.github.io/blog/p/xring/</guid><description>&lt;h2 id="玄戒o1芯片架构">玄戒O1芯片架构
+&lt;/h2>&lt;h3 id="芯片基础">芯片基础
+&lt;/h3>&lt;p>&lt;em>&lt;strong>CPU:&lt;/strong>&lt;/em> 基于ARMv9.2指令集架构的Cortex CPU集群&lt;br>
+&lt;em>&lt;strong>GPU:&lt;/strong>&lt;/em> ARM的Immortalis GPU IP&lt;br>
+&lt;em>&lt;strong>系统级设计:&lt;/strong>&lt;/em> 玄戒O1芯片的互联技术采用了ARM的CoreLink系统IP
+&lt;img src="https://raw.githubusercontent.com/etherealzoom/blog_img/main/Pic/20250709222546138.png"
+loading="lazy"
+alt="SoC Architecture"
+>&lt;/p>
+&lt;h3 id="cpu架构">CPU架构
+&lt;/h3>&lt;ol>
+&lt;li>
+&lt;p>十核四丛集设计&lt;br>
+Cortex-X925 3.9GHz *2&lt;br>
+-&amp;gt; 最高主频达3.9GHz，表现超越业界标准设计，是小米玄戒团队通过大量创新和数百次版图迭代优化的结果&lt;br>
+Cortex-A725 3.4GHz *4&lt;br>
+Cortex-A725 1.9GHz *2&lt;br>
+Cortex-A520 1.8GHz *2&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Ultra-fast Micro Control Unit-on chip&lt;br>
+在硬件上实现对各个核的调度&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>缓存结构&lt;br>
+&lt;em>数据保存的位置离使用的位置越近，性能越高，降低延迟核功耗&lt;/em>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>玄戒团队三个提高主频的方法&lt;br>
+(1) 优化供电网络设计：边缘供电+空间组网&lt;br>
+玄戒团队将主供电单元移到SoC两侧，缩短逻辑单元的物理距离&lt;br>
+(2) 自研多种3nm标准单元Std Cell&lt;br>
+(3) 电路版图全链路迭代优化+人工精调&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;h3 id="npu">NPU
+&lt;/h3>&lt;p>玄戒O1内置6核NPU，集成Scalar标量加速器、Vector矢量加速器和Tensor张量加速器，NPU算力可达44 TOPS ，支持多算法并行计算。在拍摄时，可并行“拍照”和“预览”算法，不仅满足计算摄影的影像算法需求，更针对小米自有的端侧模型进行了硬件底层的深度定制。&lt;br>
+配合全新第三代小米端侧模型，AI处理速度更快，同时功耗更低，使手机在智能语音助手、图像识别、智能场景优化等AI应用方面表现更加出色。&lt;/p>
+&lt;h3 id="isp">ISP
+&lt;/h3>&lt;p>xiaomi自研第四代ISP单元&lt;/p>
+&lt;p>&lt;em>&lt;strong>References.&lt;/strong>&lt;/em>&lt;br>
+[1] &lt;a class="link" href="https://www.bilibili.com/video/BV18sJHz5ENR/?share_source=copy_web&amp;amp;vd_source=9ffe3740cc87c3869a8fd1a2a7aa9ac5" target="_blank" rel="noopener"
+>极客湾&lt;/a>&lt;br>
+[2] &lt;a class="link" href="https://www.bilibili.com/video/BV1yB7aztECc/?share_source=copy_web&amp;amp;vd_source=9ffe3740cc87c3869a8fd1a2a7aa9ac5" target="_blank" rel="noopener"
+>老石谈芯&lt;/a>&lt;/p></description></item></channel></rss>
